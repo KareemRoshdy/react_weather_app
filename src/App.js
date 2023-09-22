@@ -10,7 +10,6 @@ function App() {
   const [data, setData] = useState(null);
   const [searchVal, setSearchVal] = useState("");
   const [country, setCountry] = useState(null);
-  const [active, setActive] = useState(false);
 
   // ================================= //
   const [open, setOpen] = useState(false);
@@ -37,7 +36,20 @@ function App() {
   const handelSearch = async (val) => {
     setSearchVal(val);
 
-    if (searchVal.match(/\s/g)) {
+    // if (val.match(/\s/g)) {
+    //   try {
+    //     const res = await axios(
+    //       `http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${searchVal}`
+    //     );
+    //     setCountry(res?.data);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // } else {
+    //   setCountry(null);
+    //   forecast();
+    // }
+    if (val) {
       try {
         const res = await axios(
           `http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${searchVal}`
