@@ -38,7 +38,7 @@ function App() {
     if (val) {
       try {
         const res = await axios(
-          `http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${val}`
+          `http://api.weatherapi.com/v1/search.json?key=${api_key}&aqi=yes&q=${searchVal}&days=5`
         );
         setCountry(res?.data);
       } catch (error) {
