@@ -40,7 +40,6 @@ function App() {
         const res = await axios(
           `https://api.weatherapi.com/v1/search.json?key=${api_key}&q=${searchVal}`
         );
-        console.log(res?.data);
         res?.data && setCountry(res?.data);
       } catch (error) {
         console.log(error);
