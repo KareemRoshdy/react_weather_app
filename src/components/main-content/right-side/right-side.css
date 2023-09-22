@@ -1,0 +1,148 @@
+.highlight > h2 {
+  margin-bottom: 12px;
+}
+
+.wrapper {
+  flex-wrap: wrap;
+}
+
+.card-sm {
+  background: var(--black-alpha-10);
+  padding: 10px 20px;
+  height: 130px;
+  border-radius: var(--radius-16);
+  flex: 1;
+}
+
+.card-head {
+  margin-bottom: 20px;
+}
+
+.card-head .title-3 {
+  color: var(--on-surface-variant);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  background-color: var(--bg-api-1);
+  color: var(--on-bg-api-1);
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-semiBold);
+  font-size: var(--label-1);
+  cursor: help;
+}
+
+.highlight .icon {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.highlight .icon svg {
+  font-size: 35px;
+}
+
+.card-list {
+  width: 100%;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.card-list .card-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-list .card-item .label-1 {
+  color: var(--on-surface-variant);
+}
+
+.sunrise-card .icon {
+  flex: 0;
+  justify-content: flex-start;
+}
+
+.sunrise-card .card-item {
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.slider-container {
+  overflow-x: auto;
+  border-bottom-left-radius: var(--radius-16);
+  border-top-left-radius: var(--radius-16);
+}
+
+.slider-container::-webkit-scrollbar {
+  height: 0;
+}
+
+.slider-item {
+  text-align: center;
+  max-width: 145px;
+  flex: 1 1 100%;
+}
+
+.slider-card {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-item .card {
+  border-radius: var(--radius-16);
+  width: 130px;
+}
+
+.slider-item .weather-icon {
+  margin: 12px 0;
+}
+
+.air-index-row .card-item {
+  flex-direction: column-reverse;
+}
+
+@media (width <= 750px) {
+  .card-list .card-item {
+    flex: 40%;
+    justify-content: flex-end;
+  }
+
+  .sunrise-card .card-item {
+    justify-content: flex-start;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-sm {
+    width: 100%;
+  }
+
+  .right-side .wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .card-sm:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media (width <= 365px) {
+  .card-list {
+    flex-wrap: wrap;
+  }
+
+  .sunrise-card .card-item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

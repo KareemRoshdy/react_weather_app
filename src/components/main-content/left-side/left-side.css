@@ -1,0 +1,40 @@
+.wrapper {
+  margin: 15px 0;
+}
+
+.weather-icon {
+  margin: auto;
+}
+
+.meta-list {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--outline);
+}
+
+.meta-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.meta-text {
+  color: var(--on-surface-variant);
+}
+
+.forecast > .title-2 {
+  margin-bottom: 15px;
+}
+
+.span .title-2 {
+  margin-bottom: 0;
+}
+
+.forecast .card-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.forecast .card-item .label-1 {
+  width: 100%;
+  color: var(--on-surface-variant);
+  font-size: var(--label-1);
+  text-align: center;
+}
