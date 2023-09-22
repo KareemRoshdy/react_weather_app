@@ -35,10 +35,14 @@ function App() {
   // Search Validation
   const handelSearch = async (val) => {
     setSearchVal(val);
-    if (val) {
+    if (val.length > 2) {
+      // const res = await axios(
+      //   `http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${searchVal}`
+      // );
+      // setCountry(res?.data);
       try {
         const res = await axios(
-          `http://api.weatherapi.com/v1/search.json?key=${api_key}&aqi=yes&q=${searchVal}&days=5`
+          `http://api.weatherapi.com/v1/search.json?key=${api_key}&q=${searchVal}`
         );
         setCountry(res?.data);
       } catch (error) {
