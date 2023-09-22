@@ -19,9 +19,11 @@ const SearchInput = ({
       <input
         type="text"
         placeholder="search City..."
-        onFocus={openSearchInput}
         value={searchVal}
-        onChange={(e) => handelSearch(e.target.value)}
+        onChange={(e) => {
+          e.target.value === "" ? closeSearchInput() : openSearchInput();
+          handelSearch(e.target.value);
+        }}
       />
 
       <div className="search-input-view">
